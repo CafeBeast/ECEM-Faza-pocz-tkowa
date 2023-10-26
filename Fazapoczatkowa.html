@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	
+	<title>ECEM Easy Chess Easy checkMate </title>
+	
+	<meta name="description" content="Strona internetowa."/>
+	<meta name="keywords" content="Zamów"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="Fazapoczatkowa.css" type="text/css"/>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="container">
+
+
+<div class="navbar  navbar-dark bg-navbaro navbar-expand-md">
+	<a class="navbar-brand">ECEM</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="mainmenu">
+	
+ <ul class="navbar-nav">
+ 
+	<li class="nav-item">
+	<a class="nav-link" href="../../ecem.html">Strona główna</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="../../Zasady gry/ZasadyGryP.html">Zasady Gry</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link dropdown-toggle active" href="EtapyGry.html" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Etapy gry</a>
+	<div class="dropdown-menu"aria-labelledby="submenu">
+	<a class="dropdown-item" href="EtapyGry.html">Etapy Gry</a>
+	<a class="dropdown-item" href="Fazapoczatkowa.html">Faza początkowa</a>
+	<a class="dropdown-item" href="../Fazasrodkowa/Fazasrodkowa.html">Faza środkowa</a>
+	<a class="dropdown-item" href="../Fazakoncowa/Fazakoncowa.html">Faza końcowa</a>
+	</div>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="../../Zagraj/ZasadyGry.html">Zagraj</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="#">Więcej informacji</a>
+	</li>
+ 
+ </ul>
+</div>
+</div>
+
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="pustka"></div>
+</div>
+<div class="row">
+	<div class="col-sm-1">
+		<div class="okno">
+		<!--	<ol>
+				<li><a href="#">faza początkowa</a> 
+					<li><a href="Otwarcie">Otwarcie szachowe</a> </li>
+					<li><a href="#Repertuar">Repertuar debiutowy</a> </li>
+					<li><a href="#Teoria">Teoria otwarć szachowych</a> </li>
+					<li><a href="#maskicrf">Cele otwarcia</a> 
+						<ul><a href="#rozwoj">Szybki rozwój figur</a> </ul>
+						<ul><a href="#Kontrola">Kontrola centrum</a> </ul>
+						<ul><a href="#Bezpieczenstwo">Bezpieczeństwo króla</a> </ul>
+						<ul><a href="#struktura">Prawidłowa struktura pionów</a> </ul>
+					</li>
+					<li><a href="#Rodzaje">Rodzaje otwarć</a>
+						<ul><a href="#otwarte">Debiuty otwarte</a> </ul>
+						<ul><a href="#połotwarte">Debiuty półotwarte</a> </ul>
+						<ul><a href="#zamkniete">Debiuty zamknięte</a> </ul>
+					</li>
+				</li>
+				<li><a href="#">faza środkowa</a></li>
+				<li><a href="#">faza końcowa</a></li>
+			
+			</ol>
+	-->	</div> 
+
+	</div>
+	<div class="col-sm-6 col-md-8">
+		<div id="board">
+		
+		<h1 id="Otwarcie">Otwarcie szachowe</h1>
+		
+		początkowa faza partii szachów, zwana również debiutem. W większości szachowych partii można wyróżnić jej trzy fazy: otwarcie (debiut),
+		grę środkową i końcową. Zazwyczaj trudno jest jednoznacznie określić, kiedy kończy się otwarcie, a zaczyna gra środkowa. Można przyjąć 
+		w uproszczeniu, że otwarcie to kilkanaście lub dwadzieścia kilka pierwszych posunięć w partii.<br></br>
+
+		Istnieje cała obszerna teoria na temat otwarć szachowych, np. The Oxford Companion to Chess (ang. Oksfordzki niezbędnik szachowy)
+		podaje 1327 nazwanych i opisanych otwarć i wariantów[1]. Obejmuje ona takie zagadnienia, jak:<br></br>
+			•	kontrola centrum szachownicy<br  /><br  />
+			•	szybkie i spójne rozwijanie figur szachowych<br  /><br  />
+			•	tworzenie prawidłowej struktury pionów<br  /><br  />
+			•	zapewnienie ochrony króla<br  /><br  /><br></br>
+		Debiuty tradycyjnie dzieli się na:<br  /><br  />
+
+			•	otwarte – które zaczynają się od ruchu pionem 1.e4 a czarne odpowiadają symetrycznym ruchem 1...e5<br  /><br  />
+			•	półotwarte – w których po ruchu białych 1.e4 następuje inna niż 1...e5 odpowiedź czarnych<br  /><br  />
+			•	zamknięte – w których białe zaczynają ruchem innym niż 1.e4<br  /><br  /><br></br>
+		Konkretne rodzaje debiutów posiadają nazwy tradycyjne takie jak partia hiszpańska lub pochodzące od szachistów, którzy albo je wymyślili, 
+		albo szczególnie sobie upodobali, takie jak np. obrona Alechina.
+		<h2 id="Teoria">Teoria otwarć szachowych</h2>
+		Teoria otwarć opiera się na doświadczeniach wielu pokoleń szachistów i analizie milionów partii szachowych. Arcymistrzowie znają wybrane 
+		otwarcia wraz z pobocznymi wariantami nawet do trzydziestego posunięcia. Nie znaczy to, że można nabyć takie umiejętności poprzez proste
+		zapamiętanie sekwencji posunięć, ponieważ liczba wariantów jest zbyt duża. Mistrzowska biegłość w rozgrywaniu otwarć wymaga wieloletnich 
+		żmudnych studiów i zbierania doświadczeń w grze praktycznej.<br></br>
+
+		Teoria otwarć szachowych ma pięćsetletnią tradycję. Pierwsze podręczniki szachowe Luisa Luceny i Pedra Damiana z przełomu XV i XVI wieku 
+		zawierały opisy stosowanych ówcześnie otwarć i ogólniejsze wskazówki dotyczące rozgrywania początkowej fazy partii. Manuskrypty Gioachina
+		Greca z początku XVII wieku to bogaty zbiór różnych otwarć, który dziś nazwalibyśmy przeglądem pułapek debiutowych. Do końca XIX wieku
+		mistrzostwo w grze szachowej pojmowano głównie jako umiejętność przeprowadzenia szybkiego kombinacyjnego ataku, co miało swoje odzwierciedlenie
+		w sposobie rozgrywania debiutów.<br></br>
+
+		Idee gry pozycyjnej, stosowane w praktyce przez pierwszego oficjalnego mistrza świata Wilhelma Steinitza zrewolucjonizowały ogólne rozumienie
+		szachowego otwarcia. W latach dwudziestych XX wieku duży wpływ na rozwój teorii debiutów mieli hipermoderniści Aron Nimzowitsch i Richard Réti,
+		których szachowe podręczniki miały niemal naukowy charakter. Wiele w tej dziedzinie współczesne szachy zawdzięczają kolejnym mistrzom świata,
+		zwłaszcza Michaiłowi Botwinnikowi i Garriemu Kasparowowi, znanym z niezwykle starannego i kreatywnego przygotowania debiutowego.<br></br>
+
+		W drugiej połowie XX wieku wzrastająca liczba szachowych publikacji oraz rozegranych partii w coraz liczniejszych turniejach szachowych spowodowała
+		lawinowy przyrost dogłębnie przeanalizowanych wariantów. Gruntowne opanowanie tej wiedzy przez jednego człowieka stało się niemożliwe.
+		Dzisiaj tylko najwybitniejsi arcymistrzowie mogą stawić czoła programom komputerowym, które korzystają z dorobku pokoleń zapisanego
+		cyfrowo w ich książkach otwarć.<br></br>
+		
+		<h2 id="Repertuar">Repertuar debiutowy</h2>
+		W praktyce turniejowej pierwsze posunięcia w partii są zazwyczaj wykonywane dość szybko. Szachiści mają przygotowane zestawy otwarć
+		i wariantów, w których czują się biegli i dążą do skierowania przebiegu gry na tory sobie dobrze znane. Zestaw otwarć, które szachista 
+		gra najczęściej nazywamy jego repertuarem debiutowym. Na wyższym poziomie mistrzowie, znając repertuar debiutowy swoich przeciwników,
+		przygotowują konkretne warianty przeciw konkretnym rywalom. Czasami próbują zaskoczyć przeciwników posunięciem, które wcześniej 
+		nie było znane w praktyce, dokładnie przeanalizowanym w zaciszu domowym. Takie nowe posunięcie, które otwiera nowe możliwości w znanym
+		otwarciu nazywa się nowinką. Doświadczeni mistrzowie dysponują również bogatym repertuarem pułapek debiutowych, skutecznych przeciw 
+		słabszym graczom.<br></br>
+
+		<h2 id="maskicrf">Cele otwarcia</h2>
+		Pomimo wielkiej różnorodności sposobów rozgrywania otwarć główne cele początkowej fazy gry pozostają wspólne dla różnych wariantów.
+		Oczywiście, celem zasadniczym, podobnie jak w każdej fazie gry, jest niedopuszczenie do zamatowania własnego króla i unikanie strat
+		materialnych. Zakładając jednak, że szachiści nie popełniają podstawowych błędów skutkujących zbyt szybkim zakończeniem partii, można 
+		wyszczególnić cztery zasadnicze cele, do realizacji których powinni oni dążyć rozgrywając otwarcie. (W przykładach zastosowano szachową 
+		notację algebraiczną).<br></br>
+
+		<h3 id="rozwoj">Szybki rozwój figur</h3>
+		W początkowej pozycji figury są schowane za pionami i mają bardzo ograniczone możliwości działania. Zasadniczo wszystkie figury są 
+		relatywnie silniejsze, gdy mogą operować w centrum szachownicy, zatem w początkowej fazie partii należy je jak najszybciej wyprowadzić 
+		z pierwszej (ósmej) linii. Nazywa się to rozwijaniem figur. W pierwszej kolejności do walki wkraczają lekkie figury, czyli skoczki i gońce. 
+		Skoczki najczęściej rozwija się na pola f3 i c3 (f6 i c6), rzadziej na d2 i e2 (d7, e7). W celu uwolnienia gońców należy wykonać posunięcia
+		pionami e i d. Alternatywnie gońce można rozwijać na główne przekątne, np. po ruchu pionem g3, białopolowy goniec zajmuje pole g2. 
+		Ten manewr nazywa się fianchetto.<br></br>
+
+		Hetman rzadko wkracza do centrum w debiucie, ponieważ jako najcenniejsza figura jest narażony na ataki lekkich figur i pionów przeciwnika.
+		Często hetman zajmuje pozycję na drugiej (siódmej) linii. Po wykonaniu roszady wieże wspierają się nawzajem i najkorzystniej jest je ustawić
+		w otwartych lub półotwartych kolumnach (takich, w których nie ma pionów lub są tylko piony przeciwnika), ewentualnie w tych kolumnach, 
+		które szachista zamierza otworzyć. Im szybciej wszystkie figury zostaną rozwinięte, tym większą siłę będą stanowić, zatem w debiucie unika 
+		się w miarę możliwości kilkakrotnych ruchów tą samą figura.<br></br>
+		
+		Od pierwszych posunięć w partii trwa zażarta walka między stronami o dominację w centrum szachownicy. Przewaga w centrum pozwala umieszczać tam swoje figury lub przemieszczać swobodnie figury po całej szachownicy. Ustawienie własnych pionów w centrum krępuje siły przeciwnika i ogranicza mobilność jego figur, zatem w debiucie dąży się do ustawienia pionów na polach e4 i d4 (czarnych pionów na e5 i d5) i wsparcia ich figurami, by mogły utrzymać swoje pozycje. Jest to cel tzw. klasycznych otwarć.
+
+		<h3 id="Kontrola">Kontrola centrum</h3>
+		<img src="p1.png" class="img-fluid obraz" alt="a4"/>
+		<p>Alternatywnie można pozwolić przeciwnikowi na zajęcie centralnych pól i atakować je figurami, by rozbić centrum przeciwnika i dopiero wówczas
+		opanować je własnymi pionami. Tę koncepcję zaproponowali hipermoderniści. Prowadzi ona do nowoczesnych otwarć, takich jak obrona Alechina:
+		1.e4 Sf6 2.e5 Sd5 3.d4 d6 4.c4 Sb6 5.f4 – diagram obok. Białe chwilowo mają ogromną przewagę w centrum, jednak czarne mają nadzieję rozbić 
+		strukturę pionów w centrum i wykorzystać wyeksponowaną pozycję białych pionów.</p><br  /><br  />
+		
+		<h3 id="Bezpieczenstwo">Bezpieczeństwo króla</h3>
+		Początkowa pozycja króla na środku pierwszej (ósmej) linii jest wyeksponowana na ataki przeciwnika, zwłaszcza po wysłaniu pionów d i e do 
+		walki o centrum. W ogromnej większości otwarć dąży się do wykonania roszady, która umieszcza króla w bezpieczniejszym miejscu, schowanego 
+		na skrzydle za pionami i bronionego przez wieżę (czasami dodatkowo przez gońca). Roszada ma dodatkową zaletę – umożliwia szybkie rozwinięcie
+		wieży i połączenie wież na pierwszej (ósmej) linii.
+
+		<h3 id="struktura">Prawidłowa struktura pionów</h3>
+		<img src="p2.png" class="img-fluid obraz" alt="a4"/>
+		Opisane powyżej trzy cele debiutu stanowią elementarną podstawę wiedzy o otwarciach szachowych. Szachiści o pozycyjnym stylu gry eksponują
+		czwarty aspekt otwarcia – zachowanie prawidłowej struktury własnych pionów. W debiucie należy unikać powstawania pozycyjnych słabości 
+		w rodzaju zdwojonych pionów w jednej kolumnie, izolowanych pionów (takich, które nie mają przyjacielskich pionów w sąsiednich kolumnach) 
+		lub odstałych pionów (osamotnionych pionów, których sąsiedzi zawędrowali zbyt daleko do przodu). Nie zawsze jednak musi być to słabość. 
+		W niektórych debiutach celowo zdwaja się piony aby otworzyć linię dla wieży. Czasem nie powinno się też brać "darmowych" pionów, właśnie 
+		ze względu na otwarcie linii.
+
+		Wiele otwarć bazuje na idei wczesnego osłabienia struktury pionów przeciwnika. Przykładowo, w wariancie Winawera w obronie francuskiej 
+		(1.e4 e6 2.d4 d5 3.Sc3 Gb4 4.e5 c5 5.a3 Gxc3 6.b:c3 – diagram obok) czarne dobrowolnie wymieniają swego gońca na skoczka (para gońców przy
+		równowadze materialnej daje pewną przewagę w grze końcowej) oraz oddają białym nieco przestrzeni w zamian za stworzenie istotnych słabości 
+		w ich strukturze pionowej.
+		<h2 id="Rodzaje">Rodzaje otwarć</h2>
+		Tradycyjny podział otwarć szachowych rozróżnia debiuty otwarte, półotwarte i zamknięte w zależności od pierwszego posunięcia. Te nazwy 
+		rodzajów debiutów są nieco mylące, ponieważ sugerują, że w niektórych debiutach szybko dochodzi do otwarcia pozycji, w innych pozycja długo 
+		pozostaje zamknięta (otwarta pozycja charakteryzuje się brakiem pionów w centrum i otwartymi do ataku kolumnami). O ile to stwierdzenie jest
+		prawdziwe, o tyle nie przystaje do tradycyjnego podziału debiutów.
+
+		W wielu wariantach debiutów otwartych nie dochodzi do szybkiego otwarcia pozycji. I odwrotnie, niektóre warianty debiutów zamkniętych 
+		charakteryzują się szybkim otwarciem pozycji. Przykładowo, w obronie skandynawskiej, która nominalnie należy do debiutów półotwartych, 
+		czarne od pierwszego posunięcia dążą do otwarcia pozycji. Należy zatem nazwy rodzajów debiutów traktować umownie.
+
+		<h3 id="otwarte">Debiuty otwarte</h3>
+		Otwartymi nazywamy wszystkie debiuty, w których białe zaczynają ruchem 1.e4 a czarne odpowiadają symetrycznym ruchem 1...e5.
+		Wśród debiutów otwartych są klasyczne otwarcia:
+
+			•	partia hiszpańska,
+			•	partia włoska,
+			•	gambit królewski,
+			•	obrona dwóch skoczków,
+			•	obrona rosyjska,
+			•	partia szkocka,
+			•	partia wiedeńska.
+		<h3 id="połotwarte">Debiuty półotwarte</h3>
+		Debiuty, w których po ruchu białych 1.e4 następuje inna niż 1...e5 odpowiedź czarnych noszą nazwę półotwartych. Najbardziej popularne 
+		debiuty półotwarte:
+
+			•	obrona sycylijska,
+			•	obrona francuska,
+			•	obrona Caro-Kann,
+			•	obrona skandynawska,
+			•	obrona Alechina,
+			•	obrona Pirca,
+			•	debiut Nimzowitscha.
+		<h3 id="zamkniete">Debiuty zamknięte</h3>
+		Debiuty zamknięte charakteryzują się innym niż 1.e4 pierwszym ruchem białych. Debiuty zamknięte to, między innymi:
+
+			•	gambit hetmański,
+			•	obrona królewsko-indyjska,
+			•	obrona hetmańsko-indyjska,
+			•	partia angielska,
+			•	obrona Nimzowitscha,
+			•	obrona holenderska,
+			•	partia katalońska,
+			•	obrona Grünfelda,
+			•	otwarcie Rétiego.
+		Ze względu na rosnącą liczbę znanych wariantów tradycyjny podział otwarć jest niewystarczający do precyzyjnego ich usystematyzowania. 
+		Encyklopedia otwarć szachowych wprowadziła inny, bardziej precyzyjny sposób kodowania rodzajów debiutów.
+
+		Trudności w kodyfikacji otwarć szachowych sprawia fakt, że czasami do tej samej pozycji na szachownicy dochodzi się poprzez zastosowanie
+		różnej kolejności posunięć. Taka sytuacja nazywana jest transpozycją otwarcia.
+		
+		
+		</div>
+		</div>	
+		<div class="col-sm-5 col-md-3">
+		<div class="nauka">
+			<img src="a4.png" class="img-fluid" alt="a4"/>
+		</div>
+		</div>
+
+</div>
+</div>
+<div class="row">
+
+<div class="rectangle">2022&copy; ECEM
+</div>
+</div>
+
+</div>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+-->
+</body>
+
+
+</html>
